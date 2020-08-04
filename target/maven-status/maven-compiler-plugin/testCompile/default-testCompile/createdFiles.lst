@@ -1,0 +1,9 @@
+BaseandTestClasses\BaseConnection.class
+UtilsClasses\XLUtils.class
+PageObjectClasses\PageObjectAddCustomer.class
+BaseandTestClasses\TC1_LoginLogout2.class
+PageObjectClasses\PageObjectLoginLogout.class
+UtilsClasses\ExtentReport.class
+UtilsClasses\ReadConfig.class
+BaseandTestClasses\TC1_LoginLogout1.class
+BaseandTestClasses\TC2_AddCustomer.class

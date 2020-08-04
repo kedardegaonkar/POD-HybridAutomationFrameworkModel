@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+   <listeners>
+    <listener class-name="UtilsClasses.ExtentReport"/>
+   </listeners>  
+   
+   <test name="ChromeTest">
+   <parameter name="browser" value="chrome" />
+      <classes>
+         <class name="BaseandTestClasses.TC1_LoginLogout1" />
+         <class name="BaseandTestClasses.TC1_LoginLogout2" /> 
+         <class name="BaseandTestClasses.TC2_AddCustomer" /> 
+      </classes>
+   </test>
+   
+
+</suite>
