@@ -1,26 +1,48 @@
-2020-08-04 00:30:55,227 - Gtpl Bank -INFO - Chrome Opened
-2020-08-04 00:31:15,907 - Gtpl Bank -INFO - Entered valid UserName: mngr275221
-2020-08-04 00:32:10,757 - Gtpl Bank -INFO - Entered valid Password: AsuhAqa
-2020-08-04 00:32:31,248 - Gtpl Bank -INFO - Login successful. Test Case Passed
-2020-08-04 00:32:31,826 - Gtpl Bank -INFO - Closing Browser Instance
-2020-08-04 00:32:44,601 - Gtpl Bank -INFO - Chrome Opened
-2020-08-04 00:33:55,213 - Gtpl Bank -INFO - Entered UserName
-2020-08-04 00:33:55,686 - Gtpl Bank -INFO - Entered Password
-2020-08-04 00:34:00,557 - Gtpl Bank -INFO - User is not valid
-2020-08-04 00:34:03,606 - Gtpl Bank -WARN - Login failed with UserName: mngr275222 & Password: AsuhAqb. Test Case Failed
-2020-08-04 00:34:08,548 - Gtpl Bank -INFO - Entered UserName
-2020-08-04 00:34:08,929 - Gtpl Bank -INFO - Entered Password
-2020-08-04 00:34:13,722 - Gtpl Bank -INFO - User is not valid
-2020-08-04 00:34:17,958 - Gtpl Bank -WARN - Login failed with UserName: mngr275223 & Password: AsuhAqc. Test Case Failed
-2020-08-04 00:34:18,931 - Gtpl Bank -INFO - Entered UserName
-2020-08-04 00:34:19,258 - Gtpl Bank -INFO - Entered Password
-2020-08-04 00:34:25,790 - Gtpl Bank -INFO - Login successful with UserName: mngr275221 & Password: AsuhAqa
-2020-08-04 00:34:39,322 - Gtpl Bank -INFO - You Have Succesfully Logged Out!!
-2020-08-04 00:34:42,375 - Gtpl Bank -INFO - Logged out. Test Case Passed
-2020-08-04 00:34:42,376 - Gtpl Bank -INFO - Closing Browser Instance
-2020-08-04 00:34:49,202 - Gtpl Bank -INFO - Chrome Opened
-2020-08-04 00:34:57,242 - Gtpl Bank -INFO - Entered UserName
-2020-08-04 00:34:57,584 - Gtpl Bank -INFO - Entered Password
-2020-08-04 00:36:20,734 - Gtpl Bank -INFO - New Customer Form Filled & Submitted
-2020-08-04 00:36:20,779 - Gtpl Bank -INFO - New Customer Not Added. Test Case Failed
-2020-08-04 00:36:21,232 - Gtpl Bank -INFO - Closing Browser Instance
+2020-08-06 22:50:36,743 - Gtpl Bank -INFO - Executing on CHROME
+2020-08-06 22:50:45,141 - Gtpl Bank -INFO - Chrome Opened
+2020-08-06 22:50:52,819 - Gtpl Bank -INFO - Test Case Started
+2020-08-06 22:50:53,704 - Gtpl Bank -INFO - Entered valid UserName: mngr275221
+2020-08-06 22:50:54,166 - Gtpl Bank -INFO - Entered valid Password: AsuhAqa
+2020-08-06 22:50:59,216 - Gtpl Bank -INFO - Login clicked
+2020-08-06 22:51:11,631 - Gtpl Bank -INFO - Login successful
+2020-08-06 22:51:11,632 - Gtpl Bank -INFO - Test Case Completed
+2020-08-06 22:51:11,664 - Gtpl Bank -INFO - Closing Browser Instance
+2020-08-06 22:51:13,438 - Gtpl Bank -INFO - Executing on CHROME
+2020-08-06 22:51:18,340 - Gtpl Bank -INFO - Chrome Opened
+2020-08-06 22:51:28,455 - Gtpl Bank -INFO - Test Case Started
+2020-08-06 22:51:28,981 - Gtpl Bank -INFO - Entered UserName: mngr275222
+2020-08-06 22:51:29,246 - Gtpl Bank -INFO - Entered Password: AsuhAqb
+2020-08-06 22:51:39,935 - Gtpl Bank -INFO - Login clicked
+2020-08-06 22:51:43,007 - Gtpl Bank -INFO - Alert message received: User is not valid
+2020-08-06 22:51:43,410 - Gtpl Bank -INFO - Alert message accepted
+2020-08-06 22:51:46,356 - Gtpl Bank -WARN - Login failed with UserName: mngr275222 & Password: AsuhAqb
+2020-08-06 22:51:46,357 - Gtpl Bank -INFO - Test Case Completed
+2020-08-06 22:51:47,099 - Gtpl Bank -INFO - Test Case Started
+2020-08-06 22:51:47,520 - Gtpl Bank -INFO - Entered UserName: mngr275223
+2020-08-06 22:51:47,775 - Gtpl Bank -INFO - Entered Password: AsuhAqc
+2020-08-06 22:51:49,513 - Gtpl Bank -INFO - Login clicked
+2020-08-06 22:51:52,918 - Gtpl Bank -INFO - Alert message received: User is not valid
+2020-08-06 22:51:53,246 - Gtpl Bank -INFO - Alert message accepted
+2020-08-06 22:51:55,313 - Gtpl Bank -WARN - Login failed with UserName: mngr275223 & Password: AsuhAqc
+2020-08-06 22:51:55,328 - Gtpl Bank -INFO - Test Case Completed
+2020-08-06 22:51:55,797 - Gtpl Bank -INFO - Test Case Started
+2020-08-06 22:51:56,153 - Gtpl Bank -INFO - Entered UserName: mngr275221
+2020-08-06 22:51:56,521 - Gtpl Bank -INFO - Entered Password: AsuhAqa
+2020-08-06 22:52:00,068 - Gtpl Bank -INFO - Login clicked
+2020-08-06 22:52:07,875 - Gtpl Bank -INFO - Login successful with UserName: mngr275221 & Password: AsuhAqa
+2020-08-06 22:52:20,180 - Gtpl Bank -INFO - Logout clicked
+2020-08-06 22:52:23,232 - Gtpl Bank -INFO - Alert message received: You Have Succesfully Logged Out!!
+2020-08-06 22:52:23,641 - Gtpl Bank -INFO - Alert message accepted
+2020-08-06 22:52:27,101 - Gtpl Bank -INFO - Logout successful
+2020-08-06 22:52:27,105 - Gtpl Bank -INFO - Test Case Completed
+2020-08-06 22:52:27,132 - Gtpl Bank -INFO - Closing Browser Instance
+2020-08-06 22:52:28,954 - Gtpl Bank -INFO - Executing on CHROME
+2020-08-06 22:52:44,570 - Gtpl Bank -INFO - Chrome Opened
+2020-08-06 22:52:52,638 - Gtpl Bank -INFO - Test Case Started
+2020-08-06 22:52:53,199 - Gtpl Bank -INFO - Entered valid UserName: mngr275221
+2020-08-06 22:52:53,693 - Gtpl Bank -INFO - Entered valid Password: AsuhAqa
+2020-08-06 22:52:56,730 - Gtpl Bank -INFO - Login clicked
+2020-08-06 22:53:01,731 - Gtpl Bank -INFO - Login successful
+2020-08-06 22:53:47,777 - Gtpl Bank -INFO - New Customer Form Filled & Submitted
+2020-08-06 22:53:47,830 - Gtpl Bank -INFO - New Customer Not Added
+2020-08-06 22:53:48,280 - Gtpl Bank -INFO - Closing Browser Instance

@@ -6,41 +6,58 @@ import org.openqa.selenium.NoAlertPresentException;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import PageObjectClasses.PageObjectLoginLogout;
 import UtilsClasses.XLUtils;
+
+import PageObjectClasses.PageObjectLoginLogout;
+
+import UtilsClasses.ExtentReport;
 
 public class TC1_LoginLogout2 extends BaseConnection
 {	
 	@Test(dataProvider="datapro")
 	public void TC1LoginLogout2(String user, String pswd) throws IOException, InterruptedException
 	{
+		testcasestarted ();
+		
 		String alerttext;
 		
 		PageObjectLoginLogout pgll = new PageObjectLoginLogout(driver);
 		
 		pgll.setUserName(user);
-		System.out.println("Entered UserName");
-		logj.info("Entered UserName");
+		System.out.println("Entered UserName: "+user);
+		logj.info("Entered UserName: "+user);
+		ExtentReport.logger.pass("Entered UserName: "+user);
 		
 		pgll.setPassword(pswd);
-		System.out.println("Entered Password");
-		logj.info("Entered Password");
+		System.out.println("Entered Password: "+pswd);
+		logj.info("Entered Password: "+pswd);
+		ExtentReport.logger.pass("Entered UserName: "+pswd);
 		
 		pgll.clickSubmit();
+		System.out.println("Login clicked");
+		logj.info("Login clicked");
+		ExtentReport.logger.pass("Login clicked");
+		
 		Thread.sleep(3000);
 		
 		if(isAlertPresent()==true)
 		{
 			alerttext = driver.switchTo().alert().getText();
-			System.out.println(alerttext);
-			logj.info(alerttext);
+			System.out.println("Alert message received: "+alerttext);
+			logj.info("Alert message received: "+alerttext);
+			ExtentReport.logger.pass("Alert message received: "+alerttext);
 			
 			driver.switchTo().alert().accept();
+			System.out.println("Alert message accepted");
+			logj.info("Alert message accepted");
+			ExtentReport.logger.pass("Alert message accepted");
 			driver.switchTo().defaultContent();
 			
-			System.out.println("Login failed with UserName: "+user+" & Password: "+pswd+". Test Case Failed");
-			logj.warn("Login failed with UserName: "+user+" & Password: "+pswd+". Test Case Failed");
+			System.out.println("Login failed with UserName: "+user+" & Password: "+pswd);
+			logj.warn("Login failed with UserName: "+user+" & Password: "+pswd);
+			ExtentReport.logger.fail("Login failed with UserName: "+user+" & Password: "+pswd);
 			
+			testcasecompleted();
 			Assert.assertTrue(false);
 		}
 		else
@@ -49,19 +66,32 @@ public class TC1_LoginLogout2 extends BaseConnection
 			
 			System.out.println("Login successful with UserName: "+user+" & Password: "+pswd);
 			logj.info("Login successful with UserName: "+user+" & Password: "+pswd);
+			ExtentReport.logger.pass("Login successful with UserName: "+user+" & Password: "+pswd);
 			
 			pgll.clickLogout();
+			System.out.println("Logout clicked");
+			logj.info("Logout clicked");
+			ExtentReport.logger.pass("Logout clicked");
+			
+			
 			Thread.sleep(3000);
 			
 			alerttext = driver.switchTo().alert().getText();
-			System.out.println(alerttext);
-			logj.info(alerttext);
+			System.out.println("Alert message received: "+alerttext);
+			logj.info("Alert message received: "+alerttext);
+			ExtentReport.logger.pass("Alert message received: "+alerttext);
 			
 			driver.switchTo().alert().accept();
+			System.out.println("Alert message accepted");
+			logj.info("Alert message accepted");
+			ExtentReport.logger.pass("Alert message accepted");
 			driver.switchTo().defaultContent();
 			
-			System.out.println("Logged out. Test Case Passed");
-			logj.info("Logged out. Test Case Passed");	
+			System.out.println("Logout successful");
+			logj.info("Logout successful");	
+			ExtentReport.logger.pass("Logout successful");
+			
+			testcasecompleted();
 		}
 	}
 	

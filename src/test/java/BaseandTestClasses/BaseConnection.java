@@ -17,8 +17,9 @@ import org.openqa.selenium.ie.InternetExplorerOptions;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
-
 import UtilsClasses.ReadConfig;	
+
+import UtilsClasses.ExtentReport;
 
 public class BaseConnection
 {
@@ -48,6 +49,7 @@ public class BaseConnection
 		if (browser.equalsIgnoreCase("firefox"))
 		{
 			System.out.println("Executing on FIREFOX");
+			logj.info("Executing on FIREFOX");
 			System.setProperty("webdriver.gecko.driver", readconfig.getffPath());
 			System.setProperty(FirefoxDriver.SystemProperty.DRIVER_USE_MARIONETTE,"true");
 			System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE,"./00BrowserDrivers\\Log.txt"); // this file gets created. if already exists then - gets over-written at every run
@@ -58,6 +60,7 @@ public class BaseConnection
 		else if (browser.equalsIgnoreCase("chrome"))
 		{
 			System.out.println("Executing on CHROME");
+			logj.info("Executing on CHROME");
 			System.setProperty("webdriver.chrome.driver", readconfig.getchromePath());
 			System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY,"true"); /// so timeout warnings will not come in Console
 			driver = new ChromeDriver();
@@ -67,6 +70,7 @@ public class BaseConnection
 		else if (browser.equalsIgnoreCase("ie"))
 		{
 			System.out.println("Executing on IE");
+			logj.info("Executing on IE");
 			System.setProperty("webdriver.ie.driver", readconfig.getiePath());
 			InternetExplorerOptions options = new InternetExplorerOptions();
 			options.setCapability(InternetExplorerDriver.NATIVE_EVENTS, false);
@@ -92,6 +96,20 @@ public class BaseConnection
 	}
 	
 	//Common Methods:
+	public void testcasestarted () 
+	{
+		ExtentReport.logger.info("Test Case Started");
+		System.out.println("Test Case Started");
+		logj.info("Test Case Started");
+	}
+	
+	public void testcasecompleted () 
+	{
+		System.out.println("Test Case Completed");
+		logj.info("Test Case Completed");
+		ExtentReport.logger.info("Test Case Completed");
+	}
+	
 	public String RandomString()
 	{
 		String ranstr = RandomStringUtils.randomAlphabetic(8);

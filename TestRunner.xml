@@ -10,8 +10,9 @@
    <parameter name="browser" value="chrome" />
       <classes>
          <class name="BaseandTestClasses.TC1_LoginLogout1" />
-         <class name="BaseandTestClasses.TC1_LoginLogout2" /> 
+         <class name="BaseandTestClasses.TC1_LoginLogout2" />
          <class name="BaseandTestClasses.TC2_AddCustomer" /> 
+          
       </classes>
    </test>
    

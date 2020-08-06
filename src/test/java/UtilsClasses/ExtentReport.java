@@ -25,9 +25,9 @@ import BaseandTestClasses.BaseConnection;
 
 public class ExtentReport extends TestListenerAdapter
 {
-	public ExtentHtmlReporter htmlReporter;
-	public ExtentReports extent;
-	public ExtentTest logger;
+	public static ExtentHtmlReporter htmlReporter;
+	public static ExtentReports extent;
+	public static ExtentTest logger;
 	
 	public void onTestSkipped(ITestResult tr) //@TestMethodSkipped
 	{
@@ -63,8 +63,8 @@ public class ExtentReport extends TestListenerAdapter
 
 	public void onTestFailure(ITestResult tr) //@TestMethodFailed
 	{
-		logger=extent.createTest(tr.getName());
-		logger.log(Status.FAIL, MarkupHelper.createLabel(tr.getName(), ExtentColor.RED));
+		//logger=extent.createTest(tr.getName());
+		//logger.log(Status.FAIL, MarkupHelper.createLabel(tr.getName(), ExtentColor.RED));
 		
 		//Below is code for Screen-Capture to be done from here, with timestamp
 		String timeStamp= new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
@@ -84,7 +84,8 @@ public class ExtentReport extends TestListenerAdapter
 		if(f.exists())
 		{
 			try {
-				logger.fail("screenshot is below: "+logger.addScreenCaptureFromPath(screenshotPath));
+				//logger.fail("screenshot is below: "+logger.addScreenCaptureFromPath(screenshotPath));
+				logger.addScreenCaptureFromPath(screenshotPath);
 			}
 			catch (IOException e)
 			{
@@ -95,16 +96,17 @@ public class ExtentReport extends TestListenerAdapter
 
 	public void onTestSuccess(ITestResult tr) //@TestMethodPassed
 	{
+		//logger=extent.createTest(tr.getName());
+		//logger.log(Status.PASS, MarkupHelper.createLabel(tr.getName(), ExtentColor.GREEN));
+	}
+
+	public void onTestFailedButWithinSuccessPercentage(ITestResult arg0)
+	{
+		// TODO Auto-generated method stub
+	}
+
+	public void onTestStart(ITestResult tr)
+	{
 		logger=extent.createTest(tr.getName());
-		logger.log(Status.PASS, MarkupHelper.createLabel(tr.getName(), ExtentColor.GREEN));
-	}
-
-	public void onTestFailedButWithinSuccessPercentage(ITestResult arg0) {
-		// TODO Auto-generated method stub
-	}
-
-	public void onTestStart(ITestResult arg0) {
-		// TODO Auto-generated method stub
 	}
 }
-
